@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="Accueil.css">
+
+	<title>Skylors|Site</title>
+</head>
+<body>
+	<header>
+		<a href="index.html" class="logo">Skylors</a>
+		<ul>
+			<li><a href="index.html" class="active">Accueil</a></li>
+			<li><a href="Questions.html">Questions</a></li>
+			<li><a href="Mesliens.html">Mes liens</a></li>
+			<li><a href="Jeu.html">Jeu</a></li>
+		</ul>
+	</header>
+	<section>
+		<img src="img/stars.png" id="stars">
+		<img src="img/moon.png" id="moon">
+		<img src="img/mountains_behind.png" id="mountains_behind">
+		<h2 id="text">Skylors</h2>
+		<a href="#sec" id="btn">A Propos</a>
+		<img src="img/mountains_front.png" id="mountains_front">
+	</section>
+	<div class="sec" id="sec">
+		<h2>A propos de moi :</h2>
+		<br>
+
+		<br>
+
+		<p>
+			- Bonjour, je suis un jeune streamer et youtubeur de 15 ans passionné par les jeux vidéo. Mes jeux favoris sont Minecraft, Valorant, Rocket League, Apex mais je suis libre à tout autres idées. J'ai une personnalité assez amusante et décontractée en live.
+			<br>
+			<br>
+
+			- Je partage mes expériences de jeu avec ma petite mais fidèle communauté en ligne, qui compte actuellement 190 abonnés.
+			<br>
+			<br>
+			
+			- Je suis déterminé à devenir meilleur dans chacun des jeux que je joue, et améliorer mes compétences tout autant que dans le streaming ! 
+			<br>
+			<br>
+
+			- Si vous êtes un fan de jeux vidéo et que vous cherchez une personne passionnée par les jeux, Je suis la personne idéale pour vous ;). Rejoignez ma communauté en ligne pour profiter de mes expériences de jeu tout aussi fun que amusante et drole !.
+
+
+		</p>
+	</div>
+	<script>
+		let stars = document.getElementById('stars');
+		let moon = document.getElementById('moon');
+		let mountains_behind = document.getElementById('mountains_behind');
+		let text = document.getElementById('text');
+		let btn = document.getElementById('btn');
+		let mountains_front = document.getElementById('mountains_front');
+		let header = document.querySelector('header');
+
+		window.addEventListener('scroll', function(){
+			let value = window.scrollY;
+			stars.style.left = value * 0.25 + 'px';
+			moon.style.top = value * 1.05 + 'px';
+			mountains_behind.style.top = value * 0.5 + 'px';
+			mountains_front.style.top = value * 0 + 'px';
+			text.style.marginRight = value * 4 + 'px';
+			text.style.marginTop = value * 1.5 + 'px';
+			btn.style.marginTop = value * 1.5 + 'px';
+			header.style.top = value * 0.5 + 'px';
+
+
+		})
+	</script>
+</body>
+</html>
+
